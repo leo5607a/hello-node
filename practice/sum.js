@@ -3,6 +3,7 @@
     for (let i = 1; i <= param; i++){
         num+=i;
     }
+    return num;
  }
 
 console.log(sum(3));
