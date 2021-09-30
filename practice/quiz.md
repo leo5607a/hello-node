@@ -1,0 +1,2 @@
+1. after 會在500後印出，因為 function 內的程式碼都是屬於JS的範疇，不必請求 WebAPIs 協助，所以從1到500的印出會先直接放到 stack 裡面並且執行，之後在印出 after。
+2. after 會在100後就印出，因為從101到500的印出被放到 setTimeout 裡面，所以執行 setTimeout 時，需要使用到 WebAPIs，而101到500的印出請求會被放置到 Callback 裡面，等待 Callstack 裡面的指令被執行完畢後才會執行，所以當印出1到100，就會印出 after，在接著吧101到500印出來。
