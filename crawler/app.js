@@ -19,7 +19,20 @@ let format = "json";
 //     console.error("發生錯誤啦", e);
 //   });
 
-async function get(){
+// async function get(){
+//     let get = await axios
+//     .get("https://www.twse.com.tw/exchangeReport/STOCK_DAY", {
+//       params: {
+//         response: format,
+//         date: date,
+//         stockNo: stockCode,
+//       },
+//     })
+//     console.log(get.data);
+// }
+// get()
+
+(async ()=>{
     let get = await axios
     .get("https://www.twse.com.tw/exchangeReport/STOCK_DAY", {
       params: {
@@ -29,5 +42,4 @@ async function get(){
       },
     })
     console.log(get.data);
-}
-get()
+})()
